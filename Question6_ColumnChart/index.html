@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <title>Q2/PrecisionLender Question 6</title>
+</head>
+
+<style>
+    footer div {
+        color: gainsboro;
+        font-size: 10px;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="text-center p-3">
+            <h1>Q2/PrecisionLender Column Chart (Question 6)</h1>
+        </div>
+        <canvas id="q2Chart"></canvas>
+    </div>
+
+    <footer>
+        <div class="text-center">
+            <p>Developed by Orlando Lewis</p>
+        </div>
+    </footer>
+
+
+    <!-- script to populate the chart -->
+    <script>
+        // getting the element to modify
+        let q2Chart = document.getElementById("q2Chart").getContext("2d");
+
+        // creating a new chart
+        let yearlyFinanceChart = new Chart(q2Chart, {
+            type: 'bar',
+            data: {
+                labels: ["2004", "2005", "2006", "2007"],
+                datasets: [
+                    {
+                        label: "Sales",
+                        data: [1000, 1170, 660, 1030],
+                        backgroundColor: "rgb(0, 171, 204)"
+                    },
+                    {
+                        label: "Expenses",
+                        data: [400, 460, 1120, 540],
+                        backgroundColor: "rgb(30, 25, 101)"
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+
+                }
+            }
+
+        });
+
+
+    </script>
+</body>
+
+</html>
